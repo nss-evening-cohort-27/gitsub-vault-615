@@ -4,6 +4,38 @@ body {
 
 div {
   border: 1px solid black;
-  width: 400px;
-  height: 400px;
+}
+
+#profile {
+  padding-left: 10px;
+}
+
+#main-page-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#right-side-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#pinned-repositories-div {
+  height: 500px;
+}
+
+#create-new-repository-div {
+  
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
 }
