@@ -1,20 +1,100 @@
-body {
-  background-color: royalblue;
+html, body {
+  height: 100%;
+  background-color: #0f1416;
+  display: flex;
+  justify-content: center;
 }
 
-div {
-  border: 1px solid black;
+#full-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: #0f1416;
+  color: #bdc6ce;
+  padding: 20px;
+  width: 1250px;
 }
+
+
+/* --- profile --- */
 
 #profile {
-  padding-left: 10px;
+  padding-right: 30px;
+  width: 450px;
 }
+
+#profile-image-div {
+  display: flex;
+  justify-content: center;
+}
+
+#profile-image {
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+#profile-name {
+  color: #bec6cd;
+  margin-bottom: 0px;
+}
+
+#gitHub-username {
+  color: #767e87;
+}
+
+#bio {
+  font-size: 18px;
+}
+
+#profile-button-div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.profile-button {
+  padding: 5px 20px 5px 20px;
+  background-color: #262e2e;
+  color: #aab2ba;
+  text-justify: center;
+  border-radius: 8px;
+  border: none;
+}
+
+#profile-followers-div {
+  display: flex;
+  gap: 8px;
+  font-size: 16px;
+}
+
+#profile-followers-div p {
+  display: block;
+  color: #767e87;
+}
+
+#profile-info-div, #profile-highlight-div {
+  border-bottom: 1px solid #767e87;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+
+#profile-info-div p, #profile-highlight-div p {
+  margin: 5px;
+}
+
+
+/* --- main page --- */
 
 #main-page-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
+
+
+/* --- right side --- */
 
 #right-side-container {
   display: flex;
@@ -25,15 +105,35 @@ div {
 #navbar {
   display: flex;
   justify-content: space-evenly;
+  background-color: #08080d;
+  color: #bdc6ce;
+  height: 50px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#navbar a {
+  color: #767e87;
+  text-decoration: none;
 }
 
 #pinned-repositories-div {
   height: 500px;
 }
 
-#create-new-repository-div {
+#pin-a-repository-div {
   
 }
+
+#pin-a-repository-header {
+  
+}
+
+#pin-a-repository-p {
+  font-size: 16px;
+}
+
+/* --- footer --- */
 
 footer {
   display: flex;
