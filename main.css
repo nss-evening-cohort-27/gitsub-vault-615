@@ -110,11 +110,22 @@ html, body {
   height: 50px;
   align-items: center;
   margin-bottom: 20px;
+  border-bottom: 1px solid #767e87;
 }
 
 #navbar a {
   color: #767e87;
   text-decoration: none;
+  text-align: center;
+  width: 150px;
+}
+
+.active {
+  padding-top: 11px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid orange;
+  box-sizing: content-box;
+  font-weight: 500;
 }
 
 #pinned-repositories-div {
@@ -122,11 +133,11 @@ html, body {
 }
 
 #pin-a-repository-div {
-  
+  width: 100%;
 }
 
 #pin-a-repository-header {
-  
+  width: 100%;
 }
 
 #pin-a-repository-p {
@@ -138,4 +149,31 @@ html, body {
 footer {
   display: flex;
   justify-content: space-evenly;
+}
+
+
+
+
+/* ------ repositories.html ------ */
+
+#repositories-div {
+  height: 500px;
+}
+
+#repositories {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.repository-card {
+  background-color: #0f1416;
+  color: #bdc6ce;
+  border: 1px solid #767e87;
+}
+
+#create-a-repository-div {
+  width: 100%;
 }

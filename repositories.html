@@ -8,86 +8,92 @@
   <title>Repositories</title>
 </head>
 <body>
-  <div id="main-page-container">
-    <div id="profile">
-      <img id="profile-image">
-      <h3 id="profile-name">Sawak Keo</h3>
-      <p id="preferred-name">Skeo</p>
-      <p id="bio">Skeo is the best coder in the world. He loves CSS.</p>
-      <div id="profile-button-div">
-        <button class="profile-button" id="follow-button"></button>
-        <button class="profile-button" id="sponsor-button"></button>
-        <button class="profile-button" id="more-button"></button>
-      </div>
-      <div id="profile-followers-div">
-        <p><strong>1.2M</strong> followers</p>
-        <p><strong>1</strong> following</p>
-        <p>999</p>
-      </div>
-      <div id="profile-info-div">
-        <p>Nashville, Tennessee</p>
-        <p>skeo@skeoiscool.com</p>
-        <p>https://skeoiscool.com</p>
-        <p>@skeoiscool</p>
-      </div>
-      <div id="profile-highlight-div">
-        <p>Nashville Software School E27 contributor</p>
-        <p>GitHub Star</p>
-        <p>GOD TIER CODER</p>
-      </div>
-      <div id="profile-organizations-div">
-        <a href="https://github.com/nss-evening-web-development" target="_blank" rel="noopener noreferrer"><img class="organization-img" id="" src="https://avatars.githubusercontent.com/u/109764697?s=64&amp;v=4" alt="@nss-evening-web-development" size="32" height="32" width="32" data-view-component="true" class="avatar"></a>
-        <a href="#"><img class="organization-img" id="" src="#"></a>
-        <a href="#"><img class="organization-img" id="" src="#"></a>
-      </div>
-      <div id="profile-sponsors-div">
-        <img>
-      </div>
-    </div>
-    <div id="right-side-container">
-      <div id="navbar">
-        <a href="index.html" class="active">Overview</a>
-        <a href="repositories.html">Repositories</a>
-        <a href="projects.html">Projects</a>
-        <a href="packages.html">Packages</a>
-      </div>
-      <div id="pinned-repositories-div">
-        <h2 id="pinned-repositories-header">Pinned Repositories</h2>
-        <div id="pinned-repositories">
-
+  <div id="full-page-container">
+    <div id="main-page-container">
+      <div id="profile">
+        <div id="profile-image-div">
+          <img id="profile-image" src="images/skeo.png">
+        </div>
+      <h3 id="profile-name">Skeo</h3>
+        <p id="gitHub-username">skeoswf</p>
+        <p id="bio">Skeo is the best coder in the world. He loves CSS.</p>
+        <div id="profile-button-div">
+          <button class="profile-button" id="follow-button">Follow</button>
+          <button class="profile-button" id="sponsor-button">Sponsor</button>
+          <button class="profile-button" id="more-button">&#8226&#8226&#8226</button>
+        </div>
+        <div id="profile-followers-div">
+          <p><img id="followers-image" src="/images/people-16.svg"> <strong>1.2M</strong> followers</p>&#8226
+          <p><strong>1</strong> following</p>&#8226
+          <p>&star; 999</p>
+        </div>
+        <div id="profile-info-div">
+          <p>Nashville, Tennessee</p>
+          <p>skeo@skeoiscool.com</p>
+          <p>https://skeoiscool.com</p>
+          <p>@skeoiscool</p>
+        </div>
+        <div id="profile-highlight-div">
+          <h5 id="profile-highlight-header">Highlights</h5>
+          <p>Nashville Software School E27 contributor</p>
+          <p>GitHub Star</p>
+          <p>GOD TIER CODER</p>
+        </div>
+        <div id="profile-organizations-div">
+          <h5 id="profile-organizations-header">Organizations</h5>
+          <a href="https://github.com/nss-evening-web-development" target="_blank" rel="noopener noreferrer"><img class="organization-img" id="nashville-software-school-image" src="images/nashville-software-school.png" alt="@nss-evening-web-development" size="32" height="32" width="32" data-view-component="true" class="avatar"></a>
+          <a href="https://github.com/nss-evening-cohort-27" target="_blank" rel="noopener noreferrer"><img class="organization-img" id="nss-evening-cohort-27-image" src="images/nss-evening-cohort.png" alt="@nss-evening-cohort-27" size="32" height="32" width="32" data-view-component="true" class="avatar"></a>
+        </div>
+        <div id="profile-sponsors-div">
+          <img>
         </div>
       </div>
-      <div id="create-new-repository-div">
-        <h2 id="create-new-repository-header">Create a New Repository</h2>
-        <form id="create-new-repository-form">
-          <div class="mb-3">
-            <label for="repositoryName" class="form-label">Repository Name</label>
-            <input type="text" class="form-control" id="repository-name">
+      <div id="right-side-container">
+        <div id="navbar">
+          <a href="index.html">Overview</a>
+          <a href="repositories.html" class="active">Repositories</a>
+          <a href="projects.html">Projects</a>
+          <a href="packages.html">Packages</a>
+        </div>
+        <div id="repositories-div">
+          <h5 id="repositories-header">Repositories</h5>
+          <div id="repositories">
+
           </div>
-          <div class="mb-3">
-            <label for="repositoryDescription" class="form-label">Description</label>
-            <input type="text" class="form-control" id="repository-description">
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        </div>
+        <div id="create-a-repository-div">
+          <h5 id="create-a-repository-header">Create a Repository</h5>
+          <p id="create-a-repository-p">Give your repository a name and a description and then click Submit</p>
+          <form id="create-new-repository-form">
+            <div class="mb-3">
+              <label for="repository-name" class="form-label">Repository Name</label>
+              <input type="text" class="form-control" id="repository-name">
+            </div>
+            <div class="mb-3">
+              <label for="repositoryDescription" class="form-label">Description</label>
+              <input type="text" class="form-control" id="repository-description">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
       </div>
     </div>
+    <footer id="footer">
+      <a>&#169;2024 Skeo Inc</a>
+      <a>Terms</a>
+      <a>Privacy</a>
+      <a>Security</a>
+      <a>Status</a>
+      <a>Help</a>
+      <img id="github-img" href="#">
+      <a>Contact GitHub</a>
+      <a>Pricing</a>
+      <a>API</a>
+      <a>Training</a>
+      <a>Blog</a>
+      <a>About</a>
+    </footer>
   </div>
-  <footer id="footer">
-    <a>&#169;2024 Skeo Inc</a>
-    <a>Terms</a>
-    <a>Privacy</a>
-    <a>Security</a>
-    <a>Status</a>
-    <a>Help</a>
-    <img id="github-img" href="#">
-    <a>Contact GitHub</a>
-    <a>Pricing</a>
-    <a>API</a>
-    <a>Training</a>
-    <a>Blog</a>
-    <a>About</a>
-  </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="main.js"></script>
 </body>
