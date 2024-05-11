@@ -150,7 +150,7 @@ footer {
   display: flex;
   justify-content: space-evenly;
 }
-
+ 
 
 
 
@@ -176,4 +176,23 @@ footer {
 
 #create-a-repository-div {
   width: 100%;
+}
+
+
+/* packages.html */
+
+#pinned-packages-div {
+  height: 500px;
+}
+
+#pin-a-package-div {
+  width: 100%;
+}
+
+#pin-a-package-header {
+  width: 100%;
+}
+
+#pin-a-package-p {
+  font-size: 16px;
 }
