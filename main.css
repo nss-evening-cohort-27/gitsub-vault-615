@@ -187,6 +187,16 @@ footer {
   justify-content: space-between;
 }
 
+#projects {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  gap: 10px;
+  justify-content: space-between;
+}
+
 .card {
   width: 430px;
 }

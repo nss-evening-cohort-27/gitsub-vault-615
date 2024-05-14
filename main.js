@@ -82,32 +82,60 @@ createNewRepositoryForm.addEventListener("submit", newRepository)
 
 // --- projects.html --- //
 
+  const createNewProjectForm = document.querySelector("#create-a-project-form")
+
+  const newProject = (e) => {
+    e.preventDefault()
+  
+    const newProjectObj = {
+      id: projects.length + 1,
+      name: document.querySelector("#project-name").value,
+      description: document.querySelector("#project-description").value
+    }
+  
+    projects.push(newProjectObj)
+    createNewProjectForm.reset()
+    cardsOnDom(projects)
+  }
+  if (createNewProjectForm) {
+    createNewProjectForm.addEventListener("submit", newProject)
+      }
 
 const projects = [
   {
-    id:1,
-    name: "Pet adopt",
-    description: "pet adopt",
+    id: 1,
+    name: "Pet Adoption Page",
+    description: "simple page to sort through adoptable pets.",
 
+  },
+  {
+    id: 2,
+    name: "Wizarding Sorting Hat",
+    description: "a simple sorting hat app to determine the house youd be placed in at Hogwarts",
+
+  },
+  {
+    id: 3,
+    name: "Being Skeo",
+    description: "just a simple project about being the best person around. That person is Skeo."
   }
 
 ]
 const targetingApp = document.querySelector("#projects")
 
 const cardsOnDom = (array) => {
-  console.log("array", array)
+  
   let domstring = "";
   for (const project of array) {
     domstring +=
-    `<div class="card" style="width: 18rem;">
-      <div class="card-body">
-      <h2 class="card-title">${project.name}</h2>
-      <h5 class"color-title">${project.description}</h5>
+    `<div class="card project-card">
+      <div class="card-body dom-card">
+        <h2 class="card-title dom-card-title "><a href="#">${project.name}</a></h2>
+        <p class"color-text dom-card-text">${project.description}</p>
       </div>
     </div>`
-
-  targetingApp.innerHTML= domstring 
   }
+  targetingApp.innerHTML = domstring 
 }
 
 if (targetingApp) {
@@ -197,6 +225,7 @@ pinARepositoryForm.addEventListener("change", (e) => {
   }
 })
 }
+
 
 // array packages
 // 
