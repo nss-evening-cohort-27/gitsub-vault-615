@@ -14,6 +14,7 @@ const repositoryArray = [
     description: "A social media site to connect with your friends and classmates"
   },
   {
+  
     id: 2,
     name: "Twitter",
     description: "Post \"tweets\" to share with the world (in 140 characters or less)"
@@ -76,7 +77,53 @@ const newRepository = (e) => {
 //event listener for the create-new-repository-form submit button
 if (createNewRepositoryForm) {
 createNewRepositoryForm.addEventListener("submit", newRepository)
+  }
+
+
+
+
+
+const projects = [
+  {
+    id:1,
+    name: "Pet adopt",
+    description: "pet adopt",
+
+  }
+
+]
+const cardsOnDom = (array) => {
+  console.log("array", array)
+  let domstring = "";
+  for (const project of array) {
+    domstring +=
+    `<div class="card" style="width: 18rem;">
+    
+    <div class="card-body">
+      <h2 class="card-title">${projects.name}</h2>
+     <h5 class"color-title">${projects.house}</h5>
+      
+     
+     
+    </div>
+
+  
+  </div>`
+  
+
+
+      
+     
+  
+  targetingApp.innerHTML= domstring
+    
+  }
 }
+
+if (targetingApp) {
+  cardsOnDom(projects)
+} 
+
 
 
 
@@ -158,3 +205,4 @@ pinARepositoryForm.addEventListener("change", (e) => {
     renderCards(pinnedRepositoriesArray, pinnedRepositories)
   }
 })
+
