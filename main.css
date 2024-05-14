@@ -239,3 +239,13 @@ footer {
 #pin-a-package-p {
   font-size: 16px;
 }
+
+#packages {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  gap: 10px;
+  justify-content: space-between;
+}
