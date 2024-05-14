@@ -80,7 +80,7 @@ createNewRepositoryForm.addEventListener("submit", newRepository)
   }
 
 
-
+// --- projects.html --- //
 
 
 const projects = [
@@ -92,31 +92,21 @@ const projects = [
   }
 
 ]
+const targetingApp = document.querySelector("#projects")
+
 const cardsOnDom = (array) => {
   console.log("array", array)
   let domstring = "";
   for (const project of array) {
     domstring +=
     `<div class="card" style="width: 18rem;">
-    
-    <div class="card-body">
-      <h2 class="card-title">${projects.name}</h2>
-     <h5 class"color-title">${projects.house}</h5>
-      
-     
-     
-    </div>
+      <div class="card-body">
+      <h2 class="card-title">${project.name}</h2>
+      <h5 class"color-title">${project.description}</h5>
+      </div>
+    </div>`
 
-  
-  </div>`
-  
-
-
-      
-     
-  
-  targetingApp.innerHTML= domstring
-    
+  targetingApp.innerHTML= domstring 
   }
 }
 
@@ -193,7 +183,8 @@ const unpinRepository = (e) => {
   pinnedRepositoriesArray.splice(index, 1)
 }
 
-// //event listener on the form that adds a checked repository to the
+//event listener on the form that adds a checked repository to the
+if (pinARepositoryForm) {
 pinARepositoryForm.addEventListener("change", (e) => {
 
   if (e.target.checked) {
@@ -205,7 +196,7 @@ pinARepositoryForm.addEventListener("change", (e) => {
     renderCards(pinnedRepositoriesArray, pinnedRepositories)
   }
 })
-
+}
 
 // array packages
 // 
