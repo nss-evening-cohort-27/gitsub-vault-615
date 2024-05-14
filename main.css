@@ -129,7 +129,7 @@ html, body {
 }
 
 #pinned-repositories-div {
-  height: 500px;
+  min-height: 500px;
 }
 
 #pin-a-repository-div {
@@ -166,30 +166,66 @@ footer {
   display: flex;
   justify-content: space-evenly;
 }
-
+ 
 
 
 
 /* ------ repositories.html ------ */
 
-#repositories-div {
-  height: 500px;
+#repositories-div, #pinned-repositories-div {
+  min-height: 500px;
+  margin-bottom: 20px;
 }
 
-#repositories {
+#repositories, #pinned-repositories {
   display: flex;
+  flex: 1;
   flex-wrap: wrap;
   width: 100%;
+  height: auto;
   gap: 10px;
   justify-content: space-between;
 }
 
-.repository-card {
+.card {
+  width: 430px;
+}
+
+.dom-card {
   background-color: #0f1416;
   color: #bdc6ce;
   border: 1px solid #767e87;
+  width: 430px;
+}
+
+.dom-card-title a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.dom-card-text {
+  font-size: 16px;
 }
 
 #create-a-repository-div {
   width: 100%;
+}
+
+
+/* packages.html */
+
+#pinned-packages-div {
+  height: 500px;
+}
+
+#pin-a-package-div {
+  width: 100%;
+}
+
+#pin-a-package-header {
+  width: 100%;
+}
+
+#pin-a-package-p {
+  font-size: 16px;
 }
