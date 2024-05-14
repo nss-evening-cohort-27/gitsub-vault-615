@@ -272,7 +272,7 @@ const renderPackagesCard = (array) => {
   for (const package of array) {
       domString += `<div class="card packages-card">
       <div class="card-body dom-card">
-        <h5 class="card-title dom-card-title packages-name">${package.name}</h5>
+        <h5 class="card-title dom-card-title packages-name"><a href="#">${package.name}</a></h5>
         <p class="card-text dom-card-text packages-description">${package.description}</p>
       </div>
     </div>`
