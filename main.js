@@ -146,18 +146,18 @@ const unpinRepository = (e) => {
   pinnedRepositoriesArray.splice(index, 1)
 }
 
-//event listener on the form that adds a checked repository to the
-pinARepositoryForm.addEventListener("change", (e) => {
+// //event listener on the form that adds a checked repository to the
+// pinARepositoryForm.addEventListener("change", (e) => {
 
-  if (e.target.checked) {
-    pinRepository(e)
-    renderCards(pinnedRepositoriesArray, pinnedRepositories)
-  } else {
-    unpinRepository(e)
-    console.log(pinnedRepositoriesArray)
-    renderCards(pinnedRepositoriesArray, pinnedRepositories)
-  }
-})
+//   if (e.target.checked) {
+//     pinRepository(e)
+//     renderCards(pinnedRepositoriesArray, pinnedRepositories)
+//   } else {
+//     unpinRepository(e)
+//     console.log(pinnedRepositoriesArray)
+//     renderCards(pinnedRepositoriesArray, pinnedRepositories)
+//   }
+// })
 
 
 
@@ -218,3 +218,22 @@ if(packages) {
   renderPackagesCard(packagesyArray)
 }
 
+// create new package 
+const createNewPackages = document.querySelector("#createNewPackages")
+
+const newPackage = (e) => {
+  e.preventDefault()
+
+  const newPackageObj = {
+    id: packagesyArray.length + 1,
+    name: document.querySelector("#packages-name").value,
+    description: document.querySelector("#packages-description").value
+  }
+
+  packagesyArray.push(newPackageObj)
+  createNewPackages.reset()
+  renderPackagesCard(packagesyArray)
+}
+if(createNewPackages) {
+  createNewPackages.addEventListener("submit", newPackage)
+}
