@@ -147,22 +147,22 @@ const unpinRepository = (e) => {
 }
 
 //event listener on the form that adds a checked repository to the
-// pinARepositoryForm.addEventListener("change", (e) => {
+pinARepositoryForm.addEventListener("change", (e) => {
 
-//   if (e.target.checked) {
-//     pinRepository(e)
-//     renderCards(pinnedRepositoriesArray, pinnedRepositories)
-//   } else {
-//     unpinRepository(e)
-//     console.log(pinnedRepositoriesArray)
-//     renderCards(pinnedRepositoriesArray, pinnedRepositories)
-//   }
-// })
+  if (e.target.checked) {
+    pinRepository(e)
+    renderCards(pinnedRepositoriesArray, pinnedRepositories)
+  } else {
+    unpinRepository(e)
+    console.log(pinnedRepositoriesArray)
+    renderCards(pinnedRepositoriesArray, pinnedRepositories)
+  }
+})
 
 
 
 // array packages
-
+// 
 const packagesyArray = [
   {
     id: 1,
