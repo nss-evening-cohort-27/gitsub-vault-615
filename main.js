@@ -106,18 +106,26 @@ const projects = [
     id: 1,
     name: "Pet Adoption Page",
     description: "simple page to sort through adoptable pets.",
-
+    socials: [
+      "twitter", "facebook" , "instagram"
+    ]
   },
   {
     id: 2,
     name: "Wizarding Sorting Hat",
     description: "a simple sorting hat app to determine the house youd be placed in at Hogwarts",
+    socials: [
+      "twitter", "facebook", "instagram"
+    ]
 
   },
   {
     id: 3,
     name: "Being Skeo",
-    description: "just a simple project about being the best person around. That person is Skeo."
+    description: "just a simple project about being the best person around. That person is Skeo.",
+    socials: 
+      ["twitter", "facebook", "instagram"]
+    
   }
 
 ]
@@ -132,6 +140,8 @@ const cardsOnDom = (array) => {
       <div class="card-body dom-card">
         <h2 class="card-title dom-card-title "><a href="#">${project.name}</a></h2>
         <p class"color-text dom-card-text">${project.description}</p>
+        <p class"card-text dom-card-text"><a href="#">${project.socials[0]}</a> <a href="#">${project.socials[1]}</a>  <a href="#">${project.socials[2]}</a> </p>
+        
       </div>
     </div>`
   }
