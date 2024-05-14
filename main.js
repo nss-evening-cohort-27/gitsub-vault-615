@@ -79,6 +79,9 @@ if (createNewRepositoryForm) {
 createNewRepositoryForm.addEventListener("submit", newRepository)
   }
 
+
+// --- projects.html --- //
+
   const createNewProjectForm = document.querySelector("#create-a-project-form")
 
   const newProject = (e) => {
@@ -97,8 +100,6 @@ createNewRepositoryForm.addEventListener("submit", newRepository)
   if (createNewProjectForm) {
     createNewProjectForm.addEventListener("submit", newProject)
       }
-
-
 
 const projects = [
   {
@@ -121,32 +122,20 @@ const projects = [
 
 ]
 const targetingApp = document.querySelector("#projects")
+
 const cardsOnDom = (array) => {
   
   let domstring = "";
   for (const project of array) {
     domstring +=
     `<div class="card project-card">
-    
-    <div class="card-body dom-card">
-      <h2 class="card-title dom-card-title "><a href="#">${project.name}</a></h2>
-     <p class"color-text dom-card-text">${project.description}</p>
-      
-     
-     
-    </div>
-
-  
-  </div>`
-  
-
-
-      
-     
-  
-  targetingApp.innerHTML= domstring
-    
+      <div class="card-body dom-card">
+        <h2 class="card-title dom-card-title "><a href="#">${project.name}</a></h2>
+        <p class"color-text dom-card-text">${project.description}</p>
+      </div>
+    </div>`
   }
+  targetingApp.innerHTML = domstring 
 }
 
 if (targetingApp) {
@@ -224,8 +213,6 @@ const unpinRepository = (e) => {
 
 //event listener on the form that adds a checked repository to the
 if (pinARepositoryForm) {
-
-
 pinARepositoryForm.addEventListener("change", (e) => {
 
   if (e.target.checked) {
@@ -237,4 +224,82 @@ pinARepositoryForm.addEventListener("change", (e) => {
     renderCards(pinnedRepositoriesArray, pinnedRepositories)
   }
 })
+}
+
+
+// array packages
+// 
+const packagesyArray = [
+  {
+    id: 1,
+    name: "Dock",
+    description: "A software platform used for building applications based on containers — small and lightweight execution environments."
+  },
+  {
+    id: 2,
+    name: "Apache",
+    description: "A default package manager used for the Java programming language and the Java runtime environment."
+  },
+  {
+    id: 3,
+    name: "Nuget",
+    description: "A free and open source package manager used for the Microsoft development platforms including .NET."
+  },
+  {
+    id: 4,
+    name: "RubyGeme",
+    description: "A standard format for distributing Ruby programs and libraries used for the Ruby programming language."
+  },
+  {
+    id: 5,
+    name: "npm",
+    description: "A package manager for JavaScript, included with Node.js. npm makes it easy for developers to share and reuse code."
+  },
+  {
+    id: 6,
+    name: "Container",
+    description: "A single place for your team to manage Docker images and decide who can see and access your images."
+  }
+]
+
+
+// a function that renders packages to dom
+
+const packages= document.querySelector("#packages")
+
+const renderPackagesCard = (array) => {
+  let domString = ""
+  for (const package of array) {
+      domString += `<div class="card packages-card">
+      <div class="card-body dom-card">
+        <h5 class="card-title dom-card-title packages-name">${package.name}</h5>
+        <p class="card-text dom-card-text packages-description">${package.description}</p>
+      </div>
+    </div>`
+  }
+  packages.innerHTML = domString
+}
+
+if(packages) {
+  renderPackagesCard(packagesyArray)
+}
+
+// create new package 
+const createNewPackages = document.querySelector("#createNewPackages")
+
+const newPackage = (e) => {
+  e.preventDefault()
+
+  const newPackageObj = {
+    id: packagesyArray.length + 1,
+    name: document.querySelector("#packages-name").value,
+    description: document.querySelector("#packages-description").value
+  }
+
+  packagesyArray.push(newPackageObj)
+  createNewPackages.reset()
+  renderPackagesCard(packagesyArray)
+}
+if(createNewPackages) {
+  createNewPackages.addEventListener("submit", newPackage)
 }
