@@ -254,3 +254,23 @@ const renderPackagesCard = (array) => {
 if(packages) {
   renderPackagesCard(packagesyArray)
 }
+
+// create new package 
+const createNewPackages = document.querySelector("#createNewPackages")
+
+const newPackage = (e) => {
+  e.preventDefault()
+
+  const newPackageObj = {
+    id: packagesyArray.length + 1,
+    name: document.querySelector("#packages-name").value,
+    description: document.querySelector("#packages-description").value
+  }
+
+  packagesyArray.push(newPackageObj)
+  createNewPackages.reset()
+  renderPackagesCard(packagesyArray)
+}
+if(createNewPackages) {
+  createNewPackages.addEventListener("submit", newPackage)
+}
