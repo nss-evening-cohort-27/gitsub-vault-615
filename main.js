@@ -5,6 +5,8 @@ console.log("Skeo is cool")
 //target elements on the DOM
 const repositories = document.querySelector("#repositories")
 const createNewRepositoryForm = document.querySelector("#create-new-repository-form")
+const packages= document.querySelector("#packages")
+console.log(packages);
 
 //array of repository objects
 const repositoryArray = [
@@ -158,3 +160,56 @@ pinARepositoryForm.addEventListener("change", (e) => {
     renderCards(pinnedRepositoriesArray, pinnedRepositories)
   }
 })
+
+// array packages
+
+const packagesyArray = [
+  {
+    id: 1,
+    name: "Dock",
+    description: "A software platform used for building applications based on containers — small and lightweight execution environments."
+  },
+      {
+        id: 2,
+        name: "Apache",
+        description: "A default package manager used for the Java programming language and the Java runtime environment."
+      },
+      {
+        id: 3,
+        name: "Nuget",
+        description: "A free and open source package manager used for the Microsoft development platforms including .NET."
+      },
+      {
+        id: 4,
+        name: "RubyGeme",
+        description: "A standard format for distributing Ruby programs and libraries used for the Ruby programming language."
+      },
+      {
+        id: 5,
+        name: "npm",
+        description: "A package manager for JavaScript, included with Node.js. npm makes it easy for developers to share and reuse code."
+      },
+      {
+        id: 6,
+        name: "Container",
+        description: "A single place for your team to manage Docker images and decide who can see and access your images."
+      }
+    ]
+    
+ 
+// a function that renders packages to dom
+
+
+const renderPackagesCard = (array) => {
+  let domString = ""
+  array.forEach(package => {
+      domString += `<div class="card packages-card">
+      <div class="card-body dom-card">
+        <h5 class="card-title dom-card-title packages-name">${package.name}</h5>
+        <p class="card-text dom-card-text packages-description">${package.description}</p>
+      </div>
+    </div>`
+  })
+  packages.innerHTML = domString
+}
+renderPackagesCard(packagesyArray)
